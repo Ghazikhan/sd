@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sd</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header> 
+<h1> Students Project System </h1>
+</header>
+
+<%= yield %>
+<footer>
+Copyright@ Ghazi Khan Gola 
+</footer>
+
+</body>
+</html>

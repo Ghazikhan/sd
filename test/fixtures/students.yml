@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_name: MyString
+  groupleader_name: MyString
+  studentmember_name: MyString
+  project_id: 1
+
+two:
+  group_name: MyString
+  groupleader_name: MyString
+  studentmember_name: MyString
+  project_id: 1

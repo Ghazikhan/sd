@@ -1,0 +1,33 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :group_name, "Group Name" %><br>
+    <%= f.text_field :group_name, class: 'test' %>
+  </div>
+  <div class="field">
+    <%= f.label :groupleader_name, "Group Leader Name" %><br>
+    <%= f.text_field :groupleader_name %>
+  </div>
+  <div class="field">
+    <%= f.label :studentmember_name ,"Student Member Name" %><br>
+    <%= f.text_field :studentmember_name %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= f.collection_select(:project_id,Project.all,:id,:name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
