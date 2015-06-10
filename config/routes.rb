@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
- get 'pages/index'
+ 	root 'pages#index'
+ 	get 'pages/index'
   post 'pages/index'
  
   resources :students
